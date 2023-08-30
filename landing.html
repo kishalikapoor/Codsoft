@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuition Center</title>
+<link rel="stylesheet" href="stylelanding.css">
+</head>
+<body>
+  <header>
+    <h1>WELCOME TO LEVEL UP</h1>
+    <p>BY : DEEPTI KAPOOR</p>
+  </header>
+
+  <div class="container">
+    <div class="feature">
+      <img src="levelup.png">
+      <div class="feature-text">
+        <h2>About Us</h2>
+        <p>Myself Deepti Kapoor, an experienced educator with a passion for teaching and learning. With over ten years of teaching experience, I've had the privilege of helping countless students on their educational journey.</p>
+        <p>As an educator, my goal is to create a nurturing and inclusive learning environment where every student feels valued and empowered to reach their full potential. I'm committed to fostering a love for learning and helping students develop the skills they need to succeed academically and in life.</p>
+        <p>Thank you for considering me as an educator for your child. I'm excited to embark on this educational journey together!</p>
+  
+      </div>
+    </div>
+    
+    <div class="feature">
+      <div class="feature-text">
+        <h2>WHY LEVEL UP?</h2>
+        <p>We provide personalized learning plans tailored to each student's needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Ready to Get Started?</h2>
+    <button>Contact Us</button>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Level Up. All rights reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (name && email && message) {
+          alert(`Thank you, ${name}! Your message has been sent.`);
+          contactForm.reset();
+        } else {
+          alert("Please fill out all fields.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

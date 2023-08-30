@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishali's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+             <div class="header-text">
+                <p><b>Hi,</b></p>
+                <h1>I'm <span>Kishali Kapoor</span><br></h1>
+                <h2>Glad to have you here, please take a look around!</h2>
+             </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="kk.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">ABOUT ME</h1>
+                    <p>Hello there! I'm Kishali, a budding front-end developer fueled by curiosity and a deep passion for crafting user-friendly digital experiences. As a fresh face in the world of web development, I'm excited to bring my energy and enthusiasm to the table.
+                        My journey into the realm of front-end development began with a single line of code and a determination to create. I've spent countless hours honing my skills in HTML, CSS, and JavaScript, eager to transform ideas into functional and aesthetically pleasing websites. The prospect of creating something from scratch and watching it come to life continues to inspire me every day.
+                        I'm excited to showcase my evolving portfolio, which highlights my enthusiasm for creating clean and engaging front-end interfaces. If you're a fellow collaborator, a designer with a vision, or simply someone looking to explore the possibilities of the web, I'm here to connect and contribute.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                        <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                        <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                            <li><span>Web Development</span><br>Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Aug'23 - Current</span><br>Content Curation Lead At GDSC</li>
+                            <li><span>Aug'23 - Sept'23</span><br>Web Development Internship at CodSoft</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2025</span><br>Pursing Bachelor of Computer Applications</li>
+                            <li><span>2023</span><br>Certification in The Complete Web Developer Course 2.0 from Infosys</li>
+                            <li><span>2023</span><br>Certification in Fundamentals of Digital Marketing from Google</li>
+                            <li><span>2022</span><br>Certification in Blockchain Development from University of California, Irvine</li>
+                            <li><span>2022</span><br>Certification in Introduction to SQL from DataCamp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="Kishali Kapoor.pdf" download="Kishali Kapoor.pdf"><button class="download-button">Kishali's Resume</button></a>
+        <div class="social-icons">
+            <a href="https://twitter.com/kishali_k?t=IAyLT9swj483haUfN8P9XA&s=09" title="twitter"> 
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/kishalii_kapoor?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" title="instagram">  
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kishali-kapoor-05607b242" title="linkedin">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+          </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
